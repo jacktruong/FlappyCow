@@ -6,7 +6,7 @@
  * Copyright (c) <2014> <Lars Harmsen - Quchen>
  */
 
-package com.quchen.flappycow;
+package net.fevgames.endgame;
 
 import com.google.android.gms.games.GamesClient;
 

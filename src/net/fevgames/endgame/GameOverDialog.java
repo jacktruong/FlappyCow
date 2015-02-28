@@ -5,7 +5,7 @@
  * Copyright (c) <2014> <Lars Harmsen - Quchen>
  */
 
-package com.quchen.flappycow;
+package net.fevgames.endgame;
 
 import android.app.Dialog;
 import android.content.SharedPreferences;

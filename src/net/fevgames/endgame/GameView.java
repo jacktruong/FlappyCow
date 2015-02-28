@@ -6,25 +6,25 @@
  * Copyright (c) <2014> <Lars Harmsen - Quchen>
  */
 
-package com.quchen.flappycow;
+package net.fevgames.endgame;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import com.quchen.flappycow.Game.MyHandler;
-import com.quchen.flappycow.sprites.Background;
-import com.quchen.flappycow.sprites.Coin;
-import com.quchen.flappycow.sprites.Cow;
-import com.quchen.flappycow.sprites.Frontground;
-import com.quchen.flappycow.sprites.NyanCat;
-import com.quchen.flappycow.sprites.Obstacle;
-import com.quchen.flappycow.sprites.PauseButton;
-import com.quchen.flappycow.sprites.PlayableCharacter;
-import com.quchen.flappycow.sprites.PowerUp;
-import com.quchen.flappycow.sprites.Toast;
-import com.quchen.flappycow.sprites.Tutorial;
+import net.fevgames.endgame.Game.MyHandler;
+import net.fevgames.endgame.sprites.Background;
+import net.fevgames.endgame.sprites.Coin;
+import net.fevgames.endgame.sprites.Cow;
+import net.fevgames.endgame.sprites.Frontground;
+import net.fevgames.endgame.sprites.NyanCat;
+import net.fevgames.endgame.sprites.Obstacle;
+import net.fevgames.endgame.sprites.PauseButton;
+import net.fevgames.endgame.sprites.PlayableCharacter;
+import net.fevgames.endgame.sprites.PowerUp;
+import net.fevgames.endgame.sprites.Toast;
+import net.fevgames.endgame.sprites.Tutorial;
 
 import android.content.Context;
 import android.graphics.Canvas;

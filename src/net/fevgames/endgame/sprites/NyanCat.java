@@ -7,12 +7,12 @@
  * Nyan Cat was drawn by Christopher Torres and momo momo remixed the music by daniwell
  */
 
-package com.quchen.flappycow.sprites;
+package net.fevgames.endgame.sprites;
 
-import com.quchen.flappycow.Game;
-import com.quchen.flappycow.GameView;
-import com.quchen.flappycow.R;
-import com.quchen.flappycow.Util;
+import net.fevgames.endgame.Game;
+import net.fevgames.endgame.GameView;
+import net.fevgames.endgame.R;
+import net.fevgames.endgame.Util;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;

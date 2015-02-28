@@ -1,4 +1,4 @@
-package com.quchen.flappycow;
+package net.fevgames.endgame;
 
 import android.content.Context;
 import android.graphics.Bitmap;

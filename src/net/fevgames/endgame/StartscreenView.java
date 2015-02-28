@@ -4,7 +4,7 @@
  * @author Lars Harmsen
  * Copyright (c) <2014> <Lars Harmsen - Quchen>
  */
-package com.quchen.flappycow;
+package net.fevgames.endgame;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -183,7 +183,7 @@ public class StartscreenView extends View{
 					&& (event.getX() < REGION_PLAY[2] * getWidth())
 					&& (event.getY() > REGION_PLAY[1] * getHeight())
 					&& (event.getY() < REGION_PLAY[3] * getHeight()) ) {
-				mainActivity.startActivity(new Intent("com.quchen.flappycow.Game"));
+				mainActivity.startActivity(new Intent("net.fevgames.endgame.Game"));
 			} else if(	(event.getX() > REGION_ACHIEVEMENT[0] * getWidth())
 					&& (event.getX() < REGION_ACHIEVEMENT[2] * getWidth())
 					&& (event.getY() > REGION_ACHIEVEMENT[1] * getHeight())
@@ -204,7 +204,7 @@ public class StartscreenView extends View{
 					&& (event.getX() < REGION_INFO[2] * getWidth())
 					&& (event.getY() > REGION_INFO[1] * getHeight())
 					&& (event.getY() < REGION_INFO[3] * getHeight()) ) {
-				mainActivity.startActivity(new Intent("com.quchen.flappycow.About"));
+				mainActivity.startActivity(new Intent("net.fevgames.endgame.About"));
 			}
 		}
 		return true;
