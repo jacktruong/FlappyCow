@@ -25,13 +25,11 @@ public class StartscreenView extends View{
 	private static Bitmap socket = null;
 	
 	// Button regions: left, top, right, bottom
-	private final static float[] REGION_LOG_IN_OUT = {175/720.0f, 397/1280f, 547/720.0f, 506/1280.0f};
 	private final static float[] REGION_PLAY = {169/720.0f, 515/1280f, 553/720.0f, 699/1280.0f};
 	private final static float[] REGION_INFO = {585/720.0f, 1141/1280f, 700/720.0f, 1256/1280.0f};
 	private final static float[] REGION_SPEAKER = {25/720.0f, 1140/1280f, 140/720.0f, 1255/1280.0f};
 	private final static float[] REGION_SOCKET = {233/720.0f, 1149/1280f, 487/720.0f, 1248/1280.0f};
 	private final static float[] REGION_ACHIEVEMENT = {176/720.0f, 709/1280f, 316/720.0f, 849/1280.0f};
-	private final static float[] REGION_LEADERBOARD = {413/720.0f, 708/1280f, 553/720.0f, 849/1280.0f};
 	
 	private Rect dstSplash;
 	private Rect srcSplash;
@@ -136,10 +134,6 @@ public class StartscreenView extends View{
 	protected void onSizeChanged(int w, int h, int oldw, int oldh) {
 		super.onSizeChanged(w, h, oldw, oldh);
 		dstSplash = new Rect(0, 0, getWidth(), getHeight());
-		dstLogInOut = new Rect(	(int)(getWidth()*REGION_LOG_IN_OUT[0]),
-								(int)(getHeight()*REGION_LOG_IN_OUT[1]),
-								(int)(getWidth()*REGION_LOG_IN_OUT[2]),
-								(int)(getHeight()*REGION_LOG_IN_OUT[3]));
 		dstPlay = new Rect(	(int)(getWidth()*REGION_PLAY[0]),
 							(int)(getHeight()*REGION_PLAY[1]),
 							(int)(getWidth()*REGION_PLAY[2]),
@@ -148,10 +142,6 @@ public class StartscreenView extends View{
 									(int)(getHeight()*REGION_ACHIEVEMENT[1]),
 									(int)(getWidth()*REGION_ACHIEVEMENT[2]),
 									(int)(getHeight()*REGION_ACHIEVEMENT[3]));
-		dstLeaderboard = new Rect(	(int)(getWidth()*REGION_LEADERBOARD[0]),
-									(int)(getHeight()*REGION_LEADERBOARD[1]),
-									(int)(getWidth()*REGION_LEADERBOARD[2]),
-									(int)(getHeight()*REGION_LEADERBOARD[3]));
 		dstSpeaker = new Rect(	(int)(getWidth()*REGION_SPEAKER[0]),
 								(int)(getHeight()*REGION_SPEAKER[1]),
 								(int)(getWidth()*REGION_SPEAKER[2]),
@@ -170,16 +160,7 @@ public class StartscreenView extends View{
 	public boolean onTouchEvent(MotionEvent event) {
 		performClick();
 		if(event.getAction() == MotionEvent.ACTION_DOWN) {
-			if(	(event.getX() > REGION_LOG_IN_OUT[0] * getWidth())
-					&& (event.getX() < REGION_LOG_IN_OUT[2] * getWidth())
-					&& (event.getY() > REGION_LOG_IN_OUT[1] * getHeight())
-					&& (event.getY() < REGION_LOG_IN_OUT[3] * getHeight()) ) {
-				if(online) {
-					mainActivity.logout();
-				} else {
-					mainActivity.login();
-				}
-			} else if(	(event.getX() > REGION_PLAY[0] * getWidth())
+			if(	(event.getX() > REGION_PLAY[0] * getWidth())
 					&& (event.getX() < REGION_PLAY[2] * getWidth())
 					&& (event.getY() > REGION_PLAY[1] * getHeight())
 					&& (event.getY() < REGION_PLAY[3] * getHeight()) ) {
@@ -189,12 +170,6 @@ public class StartscreenView extends View{
 					&& (event.getY() > REGION_ACHIEVEMENT[1] * getHeight())
 					&& (event.getY() < REGION_ACHIEVEMENT[3] * getHeight()) ) {
 				mainActivity.startActivityForResult(mainActivity.getGamesClient().getAchievementsIntent(),0);
-			} else if(	(event.getX() > REGION_LEADERBOARD[0] * getWidth())
-					&& (event.getX() < REGION_LEADERBOARD[2] * getWidth())
-					&& (event.getY() > REGION_LEADERBOARD[1] * getHeight())
-					&& (event.getY() < REGION_LEADERBOARD[3] * getHeight()) ) {
-				mainActivity.startActivityForResult(mainActivity.getGamesClient().getLeaderboardIntent(
-						getResources().getString(R.string.leaderboard_highscore)), 0);
 			} else if(	(event.getX() > REGION_SPEAKER[0] * getWidth())
 					&& (event.getX() < REGION_SPEAKER[2] * getWidth())
 					&& (event.getY() > REGION_SPEAKER[1] * getHeight())
