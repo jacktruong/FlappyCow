@@ -14,12 +14,6 @@ import android.os.Bundle;
 
 public class MainActivity extends BaseGameActivity {
 	
-	/** Name of the SharedPreference that saves the medals */
-	public static final String medaille_save = "medaille_save";
-	
-	/** Key that saves the medal */
-	public static final String medaille_key = "medaille_key";
-	
 	public static final float DEFAULT_VOLUME = 0.3f;
 	
 	/** Volume for sound and music */
