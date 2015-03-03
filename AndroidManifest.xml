@@ -69,12 +69,6 @@
         <!-- Remove the lines below, if you don't want ads -->
 	        <meta-data android:name="com.google.android.gms.version"
 	           android:value="@integer/google_play_services_version"/>
-	        <activity
-	            android:name="com.google.android.gms.ads.AdActivity"
-	            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
-	        
-	        <activity android:name="com.sec.android.ad.AdActivity" 
-	             android:configChanges="keyboardHidden|orientation|screenSize"/>
         <!-- Remove the lines above, if you don't want ads -->
         
     </application>

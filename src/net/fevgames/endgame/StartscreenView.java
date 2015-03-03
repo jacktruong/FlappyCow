@@ -18,8 +18,6 @@ public class StartscreenView extends View{
 	private static Bitmap splash = null;
 	private static Bitmap logInOut = null;
 	private static Bitmap play = null;
-	private static Bitmap achievements = null;
-	private static Bitmap leaderboard = null;
 	private static Bitmap speaker = null;
 	private static Bitmap info = null;
 	private static Bitmap socket = null;
@@ -33,14 +31,8 @@ public class StartscreenView extends View{
 	
 	private Rect dstSplash;
 	private Rect srcSplash;
-	private Rect dstLogInOut;
-	private Rect srcLogInOut;
 	private Rect dstPlay;
 	private Rect srcPlay;
-	private Rect dstAchievements;
-	private Rect srcAchievements;
-	private Rect dstLeaderboard;
-	private Rect srcLeaderboard;
 	private Rect dstSpeaker;
 	private Rect srcSpeaker;
 	private Rect dstInfo;
@@ -48,7 +40,6 @@ public class StartscreenView extends View{
 	private Rect dstSocket;
 	private Rect srcSocket;
 	
-	private boolean online;
 	private MainActivity mainActivity;
 
 	public StartscreenView(MainActivity context) {
@@ -65,14 +56,6 @@ public class StartscreenView extends View{
 			play = Util.getBitmapAlpha8(mainActivity, R.drawable.play_button);
 		}
 		srcPlay = new Rect(0, 0, play.getWidth(), play.getHeight());
-		if(achievements == null) {
-			achievements = Util.getBitmapAlpha8(mainActivity, R.drawable.achievement_button);
-		}
-		srcAchievements = new Rect(0, 0, achievements.getWidth(), achievements.getHeight());
-		if(leaderboard == null) {
-			leaderboard = Util.getBitmapAlpha8(mainActivity, R.drawable.highscore_button);
-		}
-		srcLeaderboard = new Rect(0, 0, leaderboard.getWidth(), leaderboard.getHeight());
 		if(speaker == null) {
 			speaker = Util.getBitmapAlpha8(mainActivity, R.drawable.speaker);
 		}
@@ -85,7 +68,6 @@ public class StartscreenView extends View{
 		}
 		
 		setWillNotDraw(false);
-		setOnline(false);
 		setSpeaker(true);
 		setSocket(0);
 	}
@@ -98,15 +80,6 @@ public class StartscreenView extends View{
 		}
 	}
 	
-	public void setOnline(boolean online) {
-		this.online = online;
-		if(online) {
-			srcLogInOut = new Rect(0, logInOut.getHeight()/2, logInOut.getWidth(), logInOut.getHeight());
-		} else {
-			srcLogInOut = new Rect(0, 0, logInOut.getWidth(), logInOut.getHeight()/2);
-		}
-	}
-	
 	public void setSocket(int level) {
 		srcSocket = new Rect(0, level*socket.getHeight()/4, socket.getWidth(), (level+1)*socket.getHeight()/4);
 	}
@@ -114,15 +87,10 @@ public class StartscreenView extends View{
 	@Override
 	protected void onDraw(Canvas canvas) {
 		canvas.drawBitmap(splash, srcSplash, dstSplash, null);
-		canvas.drawBitmap(logInOut, srcLogInOut, dstLogInOut, null);
 		canvas.drawBitmap(play, srcPlay, dstPlay, null);
 		canvas.drawBitmap(speaker, srcSpeaker, dstSpeaker, null);
 		canvas.drawBitmap(info, srcInfo, dstInfo, null);
 		canvas.drawBitmap(socket, srcSocket, dstSocket, null);
-		if(online) {
-			canvas.drawBitmap(achievements, srcAchievements, dstAchievements, null);
-			canvas.drawBitmap(leaderboard, srcLeaderboard, dstLeaderboard, null);
-		}
 	}
 	
 	@Override
@@ -138,10 +106,6 @@ public class StartscreenView extends View{
 							(int)(getHeight()*REGION_PLAY[1]),
 							(int)(getWidth()*REGION_PLAY[2]),
 							(int)(getHeight()*REGION_PLAY[3]));
-		dstAchievements = new Rect(	(int)(getWidth()*REGION_ACHIEVEMENT[0]),
-									(int)(getHeight()*REGION_ACHIEVEMENT[1]),
-									(int)(getWidth()*REGION_ACHIEVEMENT[2]),
-									(int)(getHeight()*REGION_ACHIEVEMENT[3]));
 		dstSpeaker = new Rect(	(int)(getWidth()*REGION_SPEAKER[0]),
 								(int)(getHeight()*REGION_SPEAKER[1]),
 								(int)(getWidth()*REGION_SPEAKER[2]),
