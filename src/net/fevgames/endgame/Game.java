@@ -7,13 +7,8 @@
 
 package net.fevgames.endgame;
 
-//import com.google.android.gms.common.ConnectionResult;
-//import com.google.android.gms.common.GooglePlayServicesUtil;
-import com.google.android.gms.games.GamesClient;
-import com.google.example.games.basegameutils.BaseGameActivity;
-//import com.google.android.gms.ads.*;
-
 import android.content.SharedPreferences;
+import android.app.Activity;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.media.SoundPool;
@@ -22,7 +17,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.widget.Toast;
 
-public class Game extends BaseGameActivity{
+public class Game extends Activity{
 	/** Name of the SharedPreference that saves the medals */
 	public static final String coin_save = "coin_save";
 	
@@ -161,10 +156,6 @@ public class Game extends BaseGameActivity{
 		accomplishmentBox.points++;
 	}
 	
-	public GamesClient getGamesClient(){
-		return this.mHelper.getGamesClient();
-	}
-	
 	/**
 	 * Shows the GameOverDialog when a message with code 0 is received.
 	 */
@@ -195,13 +186,4 @@ public class Game extends BaseGameActivity{
 			game.gameOverDialog.show();
 		}
 	}
-	
-
-
-	@Override
-	public void onSignInFailed() {}
-
-	@Override
-	public void onSignInSucceeded() {}
-	
 }

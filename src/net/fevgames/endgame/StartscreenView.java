@@ -27,7 +27,6 @@ public class StartscreenView extends View{
 	private final static float[] REGION_INFO = {585/720.0f, 1141/1280f, 700/720.0f, 1256/1280.0f};
 	private final static float[] REGION_SPEAKER = {25/720.0f, 1140/1280f, 140/720.0f, 1255/1280.0f};
 	private final static float[] REGION_SOCKET = {233/720.0f, 1149/1280f, 487/720.0f, 1248/1280.0f};
-	private final static float[] REGION_ACHIEVEMENT = {176/720.0f, 709/1280f, 316/720.0f, 849/1280.0f};
 	
 	private Rect dstSplash;
 	private Rect srcSplash;
@@ -129,11 +128,6 @@ public class StartscreenView extends View{
 					&& (event.getY() > REGION_PLAY[1] * getHeight())
 					&& (event.getY() < REGION_PLAY[3] * getHeight()) ) {
 				mainActivity.startActivity(new Intent("net.fevgames.endgame.Game"));
-			} else if(	(event.getX() > REGION_ACHIEVEMENT[0] * getWidth())
-					&& (event.getX() < REGION_ACHIEVEMENT[2] * getWidth())
-					&& (event.getY() > REGION_ACHIEVEMENT[1] * getHeight())
-					&& (event.getY() < REGION_ACHIEVEMENT[3] * getHeight()) ) {
-				mainActivity.startActivityForResult(mainActivity.getGamesClient().getAchievementsIntent(),0);
 			} else if(	(event.getX() > REGION_SPEAKER[0] * getWidth())
 					&& (event.getX() < REGION_SPEAKER[2] * getWidth())
 					&& (event.getY() > REGION_SPEAKER[1] * getHeight())

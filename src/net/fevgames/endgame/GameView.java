@@ -13,7 +13,6 @@ import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import net.fevgames.endgame.Game.MyHandler;
 import net.fevgames.endgame.sprites.Background;
 import net.fevgames.endgame.sprites.Coin;
 import net.fevgames.endgame.sprites.Cow;
@@ -30,7 +29,6 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
-import android.os.Message;
 import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
