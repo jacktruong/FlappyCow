@@ -342,12 +342,6 @@ public class GameView extends SurfaceView{
 	 * Changes the player to Nyan Cat
 	 */
 	public void changeToNyanCat(){
-		game.accomplishmentBox.achievement_toastification = true;
-		if(game.getGamesClient().isConnected()){
-			game.getGamesClient().unlockAchievement(getResources().getString(R.string.achievement_toastification));
-		}else{
-			game.handler.sendMessage(Message.obtain(game.handler,1,R.string.toast_achievement_toastification, MyHandler.SHOW_TOAST));
-		}
 		
 		PlayableCharacter tmp = this.player;
 		this.player = new NyanCat(this, game);
