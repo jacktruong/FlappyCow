@@ -7,8 +7,6 @@
 
 package net.fevgames.endgame;
 
-//import com.google.android.gms.games.GamesClient;
-//import com.google.example.games.basegameutils.BaseGameActivity;
 import android.app.Activity;
 
 import android.os.Bundle;

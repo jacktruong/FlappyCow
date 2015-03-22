@@ -39,15 +39,6 @@ public class GameOverDialog extends Dialog {
 			}
 		});
 
-		Button reviveButton = (Button) findViewById(R.id.b_revive);
-		reviveButton.setText(game.getResources().getString(R.string.revive_button));
-		reviveButton.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				dismiss();
-				game.view.revive();
-			}
-		});
 		manageScore();
 	}
 	

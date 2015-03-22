@@ -16,18 +16,15 @@ import android.view.View;
 public class StartscreenView extends View{
 	
 	private static Bitmap splash = null;
-	private static Bitmap logInOut = null;
 	private static Bitmap play = null;
 	private static Bitmap speaker = null;
 	private static Bitmap info = null;
-	private static Bitmap socket = null;
-	
+
 	// Button regions: left, top, right, bottom
 	private final static float[] REGION_PLAY = {169/720.0f, 515/1280f, 553/720.0f, 699/1280.0f};
 	private final static float[] REGION_INFO = {585/720.0f, 1141/1280f, 700/720.0f, 1256/1280.0f};
 	private final static float[] REGION_SPEAKER = {25/720.0f, 1140/1280f, 140/720.0f, 1255/1280.0f};
-	private final static float[] REGION_SOCKET = {233/720.0f, 1149/1280f, 487/720.0f, 1248/1280.0f};
-	
+
 	private Rect dstSplash;
 	private Rect srcSplash;
 	private Rect dstPlay;
@@ -36,9 +33,7 @@ public class StartscreenView extends View{
 	private Rect srcSpeaker;
 	private Rect dstInfo;
 	private Rect srcInfo;
-	private Rect dstSocket;
-	private Rect srcSocket;
-	
+
 	private MainActivity mainActivity;
 
 	public StartscreenView(MainActivity context) {
@@ -48,9 +43,6 @@ public class StartscreenView extends View{
 			splash = Util.getBitmapAlpha8(mainActivity, R.drawable.splash);
 		}
 		srcSplash = new Rect(0, 0, splash.getWidth(), splash.getHeight());
-		if(logInOut == null) {
-			logInOut = Util.getBitmapAlpha8(mainActivity, R.drawable.signinout);
-		}
 		if(play == null) {
 			play = Util.getBitmapAlpha8(mainActivity, R.drawable.play_button);
 		}
@@ -62,13 +54,8 @@ public class StartscreenView extends View{
 			info = Util.getBitmapAlpha8(mainActivity, R.drawable.about);
 		}
 		srcInfo = new Rect(0, 0, info.getWidth(), info.getHeight());
-		if(socket == null) {
-			socket = Util.getBitmapAlpha8(mainActivity, R.drawable.socket);
-		}
-		
 		setWillNotDraw(false);
 		setSpeaker(true);
-		setSocket(0);
 	}
 	
 	public void setSpeaker(boolean on) {
@@ -79,17 +66,12 @@ public class StartscreenView extends View{
 		}
 	}
 	
-	public void setSocket(int level) {
-		srcSocket = new Rect(0, level*socket.getHeight()/4, socket.getWidth(), (level+1)*socket.getHeight()/4);
-	}
-	
 	@Override
 	protected void onDraw(Canvas canvas) {
 		canvas.drawBitmap(splash, srcSplash, dstSplash, null);
 		canvas.drawBitmap(play, srcPlay, dstPlay, null);
 		canvas.drawBitmap(speaker, srcSpeaker, dstSpeaker, null);
 		canvas.drawBitmap(info, srcInfo, dstInfo, null);
-		canvas.drawBitmap(socket, srcSocket, dstSocket, null);
 	}
 	
 	@Override
@@ -113,10 +95,6 @@ public class StartscreenView extends View{
 							(int)(getHeight()*REGION_INFO[1]),
 							(int)(getWidth()*REGION_INFO[2]),
 							(int)(getHeight()*REGION_INFO[3]));
-		dstSocket = new Rect(	(int)(getWidth()*REGION_SOCKET[0]),
-								(int)(getHeight()*REGION_SOCKET[1]),
-								(int)(getWidth()*REGION_SOCKET[2]),
-								(int)(getHeight()*REGION_SOCKET[3]));
 	}
 
 	@Override

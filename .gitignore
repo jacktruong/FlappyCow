@@ -8,7 +8,7 @@ bin/
 .project
 keystore
 
-
+app/build/
 # Built application files
 *.apk
 *.ap_
@@ -36,3 +36,5 @@ proguard/
 
 # Log Files
 *.log
+.idea
+app/app.iml
