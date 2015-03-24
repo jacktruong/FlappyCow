@@ -42,8 +42,9 @@ public class GameOverDialog extends Dialog {
 		manageScore();
 	}
 	
-	private void manageScore(){
+	private void manageScore() {
 		tvCurrentScoreVal.setText("" + game.accomplishmentBox.points);
+
 	}
 	
 }

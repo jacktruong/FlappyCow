@@ -7,7 +7,6 @@
 
 package net.fevgames.endgame;
 
-import android.content.SharedPreferences;
 import android.app.Activity;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
@@ -94,8 +93,7 @@ public class Game extends Activity{
 	}
 	
 	private void loadCoins(){
-		SharedPreferences saves = this.getSharedPreferences(coin_save, 0);
-        this.coins = saves.getInt(coin_key, 0);
+
 	}
 
 	/**
@@ -153,7 +151,7 @@ public class Game extends Activity{
 	 * What should happen, when an obstacle is passed?
 	 */
 	public void increasePoints(){
-		accomplishmentBox.points++;
+		accomplishmentBox.points+=1;
 	}
 	
 	/**
