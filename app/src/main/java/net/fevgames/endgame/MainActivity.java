@@ -27,12 +27,6 @@ public class MainActivity extends Activity {
         setContentView(view);
     }
     
-    public void login() {
-    }
-    
-    public void logout() {
-    }
-    
     public void muteToggle() {
     	if(volume != 0){
 			volume = 0;
