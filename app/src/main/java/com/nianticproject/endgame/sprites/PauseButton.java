@@ -5,12 +5,12 @@
  * Copyright (c) <2014> <Lars Harmsen - Quchen>
  */
 
-package net.fevgames.endgame.sprites;
+package com.nianticproject.endgame.sprites;
 
-import net.fevgames.endgame.Game;
-import net.fevgames.endgame.GameView;
-import net.fevgames.endgame.R;
-import net.fevgames.endgame.Util;
+import com.nianticproject.endgame.Game;
+import com.nianticproject.endgame.GameView;
+import com.nianticproject.endgame.R;
+import com.nianticproject.endgame.Util;
 
 public class PauseButton extends Sprite{
 	public PauseButton(GameView view, Game game) {

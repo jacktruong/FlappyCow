@@ -1,4 +1,4 @@
-package net.fevgames.endgame;
+package com.nianticproject.endgame;
 
 import android.app.Activity;
 import android.os.Bundle;

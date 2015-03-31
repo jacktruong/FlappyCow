@@ -6,24 +6,24 @@
  * Copyright (c) <2014> <Lars Harmsen - Quchen>
  */
 
-package net.fevgames.endgame;
+package com.nianticproject.endgame;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import net.fevgames.endgame.sprites.Background;
-import net.fevgames.endgame.sprites.Coin;
-import net.fevgames.endgame.sprites.Cow;
-import net.fevgames.endgame.sprites.Frontground;
-import net.fevgames.endgame.sprites.NyanCat;
-import net.fevgames.endgame.sprites.Obstacle;
-import net.fevgames.endgame.sprites.PauseButton;
-import net.fevgames.endgame.sprites.PlayableCharacter;
-import net.fevgames.endgame.sprites.PowerUp;
-import net.fevgames.endgame.sprites.Toast;
-import net.fevgames.endgame.sprites.Tutorial;
+import com.nianticproject.endgame.sprites.Background;
+import com.nianticproject.endgame.sprites.Coin;
+import com.nianticproject.endgame.sprites.Cow;
+import com.nianticproject.endgame.sprites.Frontground;
+import com.nianticproject.endgame.sprites.NyanCat;
+import com.nianticproject.endgame.sprites.Obstacle;
+import com.nianticproject.endgame.sprites.PauseButton;
+import com.nianticproject.endgame.sprites.PlayableCharacter;
+import com.nianticproject.endgame.sprites.PowerUp;
+import com.nianticproject.endgame.sprites.Toast;
+import com.nianticproject.endgame.sprites.Tutorial;
 
 import android.content.Context;
 import android.graphics.Canvas;

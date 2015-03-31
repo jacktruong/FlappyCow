@@ -4,7 +4,7 @@
  * @author Lars Harmsen
  * Copyright (c) <2014> <Lars Harmsen - Quchen>
  */
-package net.fevgames.endgame;
+package com.nianticproject.endgame;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -21,7 +21,7 @@ public class StartscreenView extends View{
 	private static Bitmap info = null;
 
 	// Button regions: left, top, right, bottom
-	private final static float[] REGION_PLAY = {169/720.0f, 515/1280f, 553/720.0f, 699/1280.0f};
+	private final static float[] REGION_PLAY = {169/720.0f, 1070/1280f, 553/720.0f, 1255/1280.0f};
 	private final static float[] REGION_INFO = {585/720.0f, 1141/1280f, 700/720.0f, 1256/1280.0f};
 	private final static float[] REGION_SPEAKER = {25/720.0f, 1140/1280f, 140/720.0f, 1255/1280.0f};
 
@@ -105,7 +105,7 @@ public class StartscreenView extends View{
 					&& (event.getX() < REGION_PLAY[2] * getWidth())
 					&& (event.getY() > REGION_PLAY[1] * getHeight())
 					&& (event.getY() < REGION_PLAY[3] * getHeight()) ) {
-				mainActivity.startActivity(new Intent("net.fevgames.endgame.Game"));
+				mainActivity.startActivity(new Intent("com.nianticproject.endgame.Game"));
 			} else if(	(event.getX() > REGION_SPEAKER[0] * getWidth())
 					&& (event.getX() < REGION_SPEAKER[2] * getWidth())
 					&& (event.getY() > REGION_SPEAKER[1] * getHeight())
@@ -115,7 +115,7 @@ public class StartscreenView extends View{
 					&& (event.getX() < REGION_INFO[2] * getWidth())
 					&& (event.getY() > REGION_INFO[1] * getHeight())
 					&& (event.getY() < REGION_INFO[3] * getHeight()) ) {
-				mainActivity.startActivity(new Intent("net.fevgames.endgame.About"));
+				mainActivity.startActivity(new Intent("com.nianticproject.endgame.About"));
 			}
 		}
 		return true;

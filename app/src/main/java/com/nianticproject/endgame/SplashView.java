@@ -1,4 +1,4 @@
-package net.fevgames.endgame;
+package com.nianticproject.endgame;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -62,7 +62,7 @@ public class SplashView extends View {
                     && (event.getX() < REGION_LOGO[2] * getWidth())
                     && (event.getY() > REGION_LOGO[1] * getHeight())
                     && (event.getY() < REGION_LOGO[3] * getHeight()) ) {
-                splashActivity.startActivity(new Intent("net.fevgames.endgame.MainActivity"));
+                splashActivity.startActivity(new Intent("com.nianticproject.endgame.MainActivity"));
                 splashActivity.finish();
             }
         }

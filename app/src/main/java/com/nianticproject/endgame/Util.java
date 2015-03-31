@@ -1,4 +1,4 @@
-package net.fevgames.endgame;
+package com.nianticproject.endgame;
 
 import android.content.Context;
 import android.graphics.Bitmap;

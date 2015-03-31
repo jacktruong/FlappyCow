@@ -5,7 +5,7 @@
  * Copyright (c) <2014> <Lars Harmsen - Quchen>
  */
 
-package net.fevgames.endgame;
+package com.nianticproject.endgame;
 
 import android.app.Activity;
 import android.media.AudioManager;
