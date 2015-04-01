@@ -38,3 +38,5 @@ proguard/
 *.log
 .idea
 app/app.iml
+
+app/src/main/res/raw/random_filler_file

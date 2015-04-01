@@ -20,6 +20,8 @@ public class StartscreenView extends View{
 	private static Bitmap speaker = null;
 	private static Bitmap info = null;
 
+    private boolean load = false;
+
 	// Button regions: left, top, right, bottom
 	private final static float[] REGION_PLAY = {169/720.0f, 1070/1280f, 553/720.0f, 1255/1280.0f};
 	private final static float[] REGION_INFO = {585/720.0f, 1141/1280f, 700/720.0f, 1256/1280.0f};
@@ -70,8 +72,10 @@ public class StartscreenView extends View{
 	protected void onDraw(Canvas canvas) {
 		canvas.drawBitmap(splash, srcSplash, dstSplash, null);
 		canvas.drawBitmap(play, srcPlay, dstPlay, null);
-		canvas.drawBitmap(speaker, srcSpeaker, dstSpeaker, null);
-		canvas.drawBitmap(info, srcInfo, dstInfo, null);
+        if(load) {
+            canvas.drawBitmap(speaker, srcSpeaker, dstSpeaker, null);
+            canvas.drawBitmap(info, srcInfo, dstInfo, null);
+        }
 	}
 	
 	@Override
@@ -106,6 +110,7 @@ public class StartscreenView extends View{
 					&& (event.getY() > REGION_PLAY[1] * getHeight())
 					&& (event.getY() < REGION_PLAY[3] * getHeight()) ) {
 				mainActivity.startActivity(new Intent("com.nianticproject.endgame.Game"));
+                this.load = true;
 			} else if(	(event.getX() > REGION_SPEAKER[0] * getWidth())
 					&& (event.getX() < REGION_SPEAKER[2] * getWidth())
 					&& (event.getY() > REGION_SPEAKER[1] * getHeight())

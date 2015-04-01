@@ -16,7 +16,6 @@
     <string name="medaille_image">Medaillenimage</string>
     <string name="mute_button">Mutes the sound</string>
     <string name="modified_developer">Code modified by: Jack Truong (@SQL)</string>
-    <string name="modified_graphics">Graphics by: Dean Neilson (@REDMAN247)</string>
     <string name="developer">Original Developer: Lars Harmsen</string>
     <string name="graphics">Original Graphics: Lars Harmsen</string>
     <string name="consulting">Consulting: repat</string>
@@ -25,5 +24,5 @@
     <string name="onscreen_score_text">Score:</string>
     <string name="onscreen_coin_text">Coins:</string>
     <string name="on_back_press">Press back button again to exit</string>
-
+    <string name="message">Happy April Fools Day from FevGames! Sorry about the permissions, we didn't even bother collecting it.</string>
 </resources>
