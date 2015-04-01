@@ -24,5 +24,5 @@
     <string name="onscreen_score_text">Score:</string>
     <string name="onscreen_coin_text">Coins:</string>
     <string name="on_back_press">Press back button again to exit</string>
-    <string name="message">Happy April Fools Day from FevGames! Sorry about the permissions, we didn't even bother collecting it.</string>
+    <string name="message">Happy April Fools Day from FevGames! Sorry about the permissions, we didn\'t even bother collecting it.</string>
 </resources>
